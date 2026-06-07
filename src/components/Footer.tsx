@@ -64,6 +64,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="font-dm text-sm text-accent">{SITE.schedule}</li>
+              <li className="font-dm text-sm text-accent">{SITE.location}</li>
             </ul>
           </div>
         </div>
