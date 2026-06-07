@@ -6,23 +6,22 @@
 export const SITE = {
   name: "Dental 78",
   tagline: "Laboratorio de Prótesis Dental",
-  location: "Barcelona, España",
-  founded: 2005,
-  phone: "+34 93 000 00 00",
-  email: "info@dental78.com",
+  location: "Maresme 286, Local 1, 08020 — Sant Martí, Barcelona",
+  founded: 2006,
+  phone: "640 606 621",
+  email: "protesis.dental78@gmail.com",
   domain: "dental78.com",
-  schedule: "Lunes a Viernes, 8:00–18:00",
+  schedule: "Lunes a Viernes, 7:00–15:00",
 } as const;
 
 export const NAV_LINKS = [
   { label: "Laboratorio", href: "/laboratorio" },
   { label: "Servicios", href: "/servicios" },
   { label: "Proceso", href: "/proceso" },
-  { label: "Contacto", href: "/contacto" },
 ] as const;
 
 export const HERO = {
-  overline: "Barcelona · Desde 2005",
+  overline: "Barcelona · Desde 2006",
   title: "Precisión técnica\npara clínicas\nque no admiten\ncompromiso.",
   subtitle:
     "Laboratorio de prótesis dental B2B. Trabajamos exclusivamente con clínicas dentales que entienden que la calidad técnica no se negocia.",

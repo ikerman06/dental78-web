@@ -56,7 +56,7 @@ export default function Nav() {
             ))}
             <Link
               href="/contacto"
-              className="ml-4 px-5 py-2 border border-brand/50 text-cream text-sm font-dm tracking-wider hover:border-brand hover:bg-brand/10 transition-all duration-200"
+              className="ml-2 px-5 py-2 border border-brand/50 text-cream text-sm font-dm tracking-wider hover:border-brand hover:bg-brand/10 transition-all duration-200"
             >
               Contacto
             </Link>
