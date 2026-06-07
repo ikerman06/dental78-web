@@ -80,7 +80,7 @@ export default function HeroSection() {
             transition={{ duration: 0.9, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
             className="relative aspect-[4/3] w-full"
           >
-            <VideoPlayer src="/video/dental78-promo.mp4" autoPlay />
+            <VideoPlayer />
 
             {/* Label */}
             <div className="absolute -bottom-6 right-0 flex items-center gap-2">
