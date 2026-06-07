@@ -24,9 +24,25 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    // Replace with actual API call when backend is ready
-    await new Promise((r) => setTimeout(r, 1200));
-    setStatus("sent");
+
+    try {
+      const res = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          "form-name": "contacto",
+          ...form,
+        }).toString(),
+      });
+
+      if (res.ok) {
+        setStatus("sent");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   if (status === "sent") {
@@ -43,8 +59,34 @@ export default function ContactForm() {
     );
   }
 
+  if (status === "error") {
+    return (
+      <div className="border border-red-900/30 p-12 text-center">
+        <h3 className="font-syne font-600 text-lg text-cream mb-3">Error al enviar</h3>
+        <p className="font-dm text-sm text-accent mb-6">
+          Ha ocurrido un error. Llámanos directamente al 640 606 621.
+        </p>
+        <button
+          onClick={() => setStatus("idle")}
+          className="font-dm text-sm text-brand hover:text-cream transition-colors"
+        >
+          Intentar de nuevo
+        </button>
+      </div>
+    );
+  }
+
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form
+      onSubmit={handleSubmit}
+      name="contacto"
+      method="POST"
+      data-netlify="true"
+      className="space-y-6"
+    >
+      {/* Hidden field required by Netlify Forms */}
+      <input type="hidden" name="form-name" value="contacto" />
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label className="font-dm text-xs tracking-widest text-brand uppercase block mb-2">
