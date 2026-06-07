@@ -20,3 +20,6 @@ yarn-error.log*
 
 # Vercel
 .vercel
+
+# Video (too large for GitHub — upload separately)
+public/video/
