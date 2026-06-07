@@ -54,6 +54,17 @@ export default function Nav() {
                 {link.label}
               </Link>
             ))}
+            <a
+              href="https://www.vevidental.com/ddental/home"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-brand/60 hover:text-brand transition-colors duration-200"
+            >
+              <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor">
+                <circle cx="4" cy="4" r="3" />
+              </svg>
+              <span className="font-dm text-xs tracking-widest uppercase">Acceso clientes</span>
+            </a>
             <Link
               href="/contacto"
               className="ml-2 px-5 py-2 border border-brand/50 text-cream text-sm font-dm tracking-wider hover:border-brand hover:bg-brand/10 transition-all duration-200"

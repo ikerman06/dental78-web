@@ -130,6 +130,56 @@ export default function ProcesoPage() {
         </div>
       </section>
 
+      {/* Vevi Dental */}
+      <section className="py-28 border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <ScrollReveal>
+              <p className="font-dm text-xs tracking-[0.3em] text-brand uppercase mb-4">
+                Gestión digital
+              </p>
+              <h2 className="font-syne font-700 text-3xl tracking-tighter text-cream mb-6">
+                Seguimiento de pedidos<br />en tiempo real
+              </h2>
+              <p className="font-dm text-sm text-accent leading-relaxed mb-8">
+                Trabajamos con <strong className="text-cream font-400">Vevi Dental</strong>, el software de gestión de referencia en el sector. Las clínicas que ya usan Vevi pueden consultar el estado de sus trabajos, historial de pedidos y comunicarse con el laboratorio directamente desde la plataforma.
+              </p>
+              <a
+                href="https://www.vevidental.com/ddental/home"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-7 py-3.5 border border-brand/50 text-cream font-dm text-sm tracking-wider hover:border-brand hover:bg-brand/10 transition-all duration-300"
+              >
+                <img
+                  src="https://www.vevidental.com/assets/logo/logo-1f2c27692524d5673402b642b3adf84e1632f7e77529c10c1f1d4c72045ee6ad.svg"
+                  alt="Vevi Dental"
+                  className="h-4 invert opacity-70"
+                />
+                Acceder a Vevi Dental
+              </a>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.15}>
+              <div className="border border-white/5 p-10 space-y-6">
+                {[
+                  { title: "Estado en tiempo real", body: "Consulta en qué fase está cada trabajo sin llamar al laboratorio." },
+                  { title: "Historial completo", body: "Acceso a todos los pedidos anteriores, especificaciones y entregas." },
+                  { title: "Comunicación directa", body: "Mensajería integrada con el técnico asignado a tu caso." },
+                ].map((item) => (
+                  <div key={item.title} className="flex gap-4">
+                    <span className="mt-1.5 w-1 h-1 rounded-full bg-brand shrink-0" />
+                    <div>
+                      <p className="font-syne font-600 text-sm text-cream mb-1">{item.title}</p>
+                      <p className="font-dm text-xs text-accent leading-relaxed">{item.body}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <FAQSection />
     </>
