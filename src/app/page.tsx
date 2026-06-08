@@ -10,6 +10,7 @@ import ServicesGrid from "@/components/home/ServicesGrid";
 import ProcessSteps from "@/components/home/ProcessSteps";
 import IntroSection from "@/components/home/IntroSection";
 import HomeCTA from "@/components/home/HomeCTA";
+import GaleriaTrabajos from "@/components/home/GaleriaTrabajos";
 
 export const metadata: Metadata = {
   title: "Dental 78 — Laboratorio de Prótesis Dental en Barcelona",
@@ -25,6 +26,7 @@ export default function HomePage() {
       <IntroSection />
       <ServicesGrid />
       <ProcessSteps />
+      <GaleriaTrabajos />
       <HomeCTA />
     </>
   );

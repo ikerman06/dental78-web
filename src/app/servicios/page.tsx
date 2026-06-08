@@ -2,6 +2,14 @@ import type { Metadata } from "next";
 import ScrollReveal from "@/components/ScrollReveal";
 import { SERVICES_DETAIL } from "@/lib/content";
 
+const SERVICE_IMAGES: Record<string, string> = {
+  ceramica: "/images/prod-coronas-modelo.jpg",
+  cadcam: "/images/prod-puente-blanco.jpg",
+  resinas: "/images/lab-protesis-completa.jpg",
+  metales: "/images/lab-protesis-manos.jpg",
+  ferulas: "/images/prod-ferula.png",
+};
+
 export const metadata: Metadata = {
   title: "Servicios",
   description:
@@ -36,14 +44,29 @@ export default function ServiciosPage() {
             className="py-28 border-b border-black/8 scroll-mt-20"
           >
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                {/* Image */}
+                {SERVICE_IMAGES[service.id] && (
+                  <div className="lg:col-span-4 lg:order-last">
+                    <ScrollReveal delay={0.05}>
+                      <div className="aspect-square overflow-hidden">
+                        <img
+                          src={SERVICE_IMAGES[service.id]}
+                          alt={service.title}
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                    </ScrollReveal>
+                  </div>
+                )}
+
                 {/* Number + title */}
                 <div className="lg:col-span-3">
                   <ScrollReveal>
                     <span className="font-syne font-800 text-7xl text-black/5 block mb-4">
                       0{index + 1}
                     </span>
-                    <div className="w-8 h-px bg-brand mb-4" />
+                    <div className="w-8 h-px bg-[#777] mb-4" />
                     <h2 className="font-syne font-700 text-2xl tracking-tighter text-[#111]">
                       {service.title}
                     </h2>

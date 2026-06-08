@@ -88,6 +88,22 @@ export default function LaboratorioPage() {
         </div>
       </section>
 
+      {/* Fotos laboratorio */}
+      <section className="border-b border-black/8">
+        <div className="grid grid-cols-2 md:grid-cols-4">
+          {[
+            { src: "/images/lab-ordenador.jpg", alt: "Gestión y organización" },
+            { src: "/images/lab-protesis-manos.jpg", alt: "Fabricación manual" },
+            { src: "/images/lab-herramientas.jpg", alt: "Herramientas de precisión" },
+            { src: "/images/lab-uniforme.jpg", alt: "Equipo Dental 78" },
+          ].map((img, i) => (
+            <div key={i} className="aspect-square overflow-hidden">
+              <img src={img.src} alt={img.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Filosofía */}
       <section className="py-32 border-b border-black/8">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
