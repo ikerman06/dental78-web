@@ -29,15 +29,15 @@ export default function LaboratorioPage() {
   return (
     <>
       {/* Header */}
-      <section className="pt-40 pb-24 border-b border-white/5">
+      <section className="pt-40 pb-24 border-b border-black/8">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
-            <p className="font-dm text-xs tracking-[0.3em] text-brand uppercase mb-6">
+            <p className="font-dm text-xs tracking-[0.3em] text-[#777] uppercase mb-6">
               El laboratorio
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <h1 className="font-syne font-800 text-5xl md:text-6xl lg:text-7xl tracking-tighter text-cream leading-[1.02] max-w-4xl">
+            <h1 className="font-syne font-800 text-5xl md:text-6xl lg:text-7xl tracking-tighter text-[#111] leading-[1.02] max-w-4xl">
               Veinte años construyendo precisión
             </h1>
           </ScrollReveal>
@@ -45,15 +45,15 @@ export default function LaboratorioPage() {
       </section>
 
       {/* Historia */}
-      <section className="py-32 border-b border-white/5">
+      <section className="py-32 border-b border-black/8">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             <ScrollReveal>
-              <p className="font-dm text-xs tracking-[0.3em] text-brand uppercase mb-6">Historia</p>
-              <h2 className="font-syne font-700 text-3xl tracking-tighter text-cream mb-8">
+              <p className="font-dm text-xs tracking-[0.3em] text-[#777] uppercase mb-6">Historia</p>
+              <h2 className="font-syne font-700 text-3xl tracking-tighter text-[#111] mb-8">
                 Barcelona, desde {SITE.founded}
               </h2>
-              <div className="space-y-4 font-dm text-sm text-accent leading-relaxed">
+              <div className="space-y-4 font-dm text-sm text-[#555] leading-relaxed">
                 <p>
                   Dental 78 nace en 2005 en Barcelona con una premisa clara: construir un laboratorio que se diferencie por organización interna y rigor técnico, no por volumen de producción.
                 </p>
@@ -72,13 +72,13 @@ export default function LaboratorioPage() {
                 {MILESTONES.map((m, i) => (
                   <div key={m.year} className="flex gap-8 group">
                     <div className="flex flex-col items-center">
-                      <div className="w-px flex-1 bg-white/5 group-first:hidden" />
+                      <div className="w-px flex-1 bg-black/8 group-first:hidden" />
                       <div className="w-2 h-2 rounded-full bg-brand/50 my-2 shrink-0" />
-                      <div className="w-px flex-1 bg-white/5 group-last:hidden" />
+                      <div className="w-px flex-1 bg-black/8 group-last:hidden" />
                     </div>
                     <div className="pb-8 pt-1">
-                      <p className="font-syne font-700 text-sm text-brand mb-1">{m.year}</p>
-                      <p className="font-dm text-sm text-accent">{m.text}</p>
+                      <p className="font-syne font-700 text-sm text-[#777] mb-1">{m.year}</p>
+                      <p className="font-dm text-sm text-[#555]">{m.text}</p>
                     </div>
                   </div>
                 ))}
@@ -89,13 +89,13 @@ export default function LaboratorioPage() {
       </section>
 
       {/* Filosofía */}
-      <section className="py-32 border-b border-white/5">
+      <section className="py-32 border-b border-black/8">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
-            <p className="font-dm text-xs tracking-[0.3em] text-brand uppercase mb-6">Filosofía</p>
+            <p className="font-dm text-xs tracking-[0.3em] text-[#777] uppercase mb-6">Filosofía</p>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-black/8">
             {[
               {
                 n: "01",
@@ -114,11 +114,11 @@ export default function LaboratorioPage() {
               },
             ].map((item, i) => (
               <ScrollReveal key={item.n} delay={i * 0.1}>
-                <div className="bg-[#080808] p-10 h-full">
-                  <span className="font-syne font-800 text-5xl text-white/5 block mb-6">{item.n}</span>
+                <div className="bg-[#f8f7f4] p-10 h-full">
+                  <span className="font-syne font-800 text-5xl text-black/5 block mb-6">{item.n}</span>
                   <div className="w-6 h-px bg-brand mb-6" />
-                  <h3 className="font-syne font-600 text-base text-cream mb-4">{item.title}</h3>
-                  <p className="font-dm text-sm text-accent leading-relaxed">{item.body}</p>
+                  <h3 className="font-syne font-600 text-base text-[#111] mb-4">{item.title}</h3>
+                  <p className="font-dm text-sm text-[#555] leading-relaxed">{item.body}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -127,25 +127,25 @@ export default function LaboratorioPage() {
       </section>
 
       {/* Equipo */}
-      <section className="py-32 border-b border-white/5">
+      <section className="py-32 border-b border-black/8">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <ScrollReveal>
-            <p className="font-dm text-xs tracking-[0.3em] text-brand uppercase mb-4">Equipo</p>
-            <h2 className="font-syne font-700 text-3xl tracking-tighter text-cream mb-16">
+            <p className="font-dm text-xs tracking-[0.3em] text-[#777] uppercase mb-4">Equipo</p>
+            <h2 className="font-syne font-700 text-3xl tracking-tighter text-[#111] mb-16">
               Técnicos especializados,<br />no generalistas
             </h2>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-black/8">
             {TEAM_ROLES.map((member, i) => (
               <ScrollReveal key={member.role} delay={i * 0.08}>
-                <div className="bg-[#080808] p-8 h-full">
+                <div className="bg-[#f8f7f4] p-8 h-full">
                   {/* Placeholder avatar */}
-                  <div className="w-16 h-16 border border-brand/20 mb-6 flex items-center justify-center">
-                    <div className="w-8 h-8 border border-brand/40 rotate-45" />
+                  <div className="w-16 h-16 border border-[#777]/20 mb-6 flex items-center justify-center">
+                    <div className="w-8 h-8 border border-[#777]/40 rotate-45" />
                   </div>
-                  <h3 className="font-syne font-600 text-sm text-cream mb-2">{member.role}</h3>
-                  <p className="font-dm text-xs text-brand">{member.years}</p>
+                  <h3 className="font-syne font-600 text-sm text-[#111] mb-2">{member.role}</h3>
+                  <p className="font-dm text-xs text-[#777]">{member.years}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -158,11 +158,11 @@ export default function LaboratorioPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             <ScrollReveal>
-              <p className="font-dm text-xs tracking-[0.3em] text-brand uppercase mb-6">Instalaciones</p>
-              <h2 className="font-syne font-700 text-3xl tracking-tighter text-cream mb-8">
+              <p className="font-dm text-xs tracking-[0.3em] text-[#777] uppercase mb-6">Instalaciones</p>
+              <h2 className="font-syne font-700 text-3xl tracking-tighter text-[#111] mb-8">
                 Tecnología al servicio<br />del técnico, no al revés
               </h2>
-              <p className="font-dm text-sm text-accent leading-relaxed">
+              <p className="font-dm text-sm text-[#555] leading-relaxed">
                 Nuestra inversión en equipamiento responde siempre a una necesidad técnica concreta, no a tendencias del mercado. Cada pieza de tecnología en nuestro laboratorio tiene un propósito específico y un operario formado para sacarle el máximo rendimiento.
               </p>
             </ScrollReveal>
@@ -172,10 +172,10 @@ export default function LaboratorioPage() {
                 {TECH.map((item, i) => (
                   <li
                     key={i}
-                    className="flex items-center gap-4 py-4 border-b border-white/5 last:border-0"
+                    className="flex items-center gap-4 py-4 border-b border-black/8 last:border-0"
                   >
                     <span className="w-1 h-1 rounded-full bg-brand shrink-0" />
-                    <span className="font-dm text-sm text-accent">{item}</span>
+                    <span className="font-dm text-sm text-[#555]">{item}</span>
                   </li>
                 ))}
               </ul>

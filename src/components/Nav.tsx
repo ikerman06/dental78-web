@@ -26,15 +26,15 @@ export default function Nav() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled || menuOpen
-            ? "bg-[#080808]/90 backdrop-blur-xl border-b border-white/5"
-            : "bg-transparent"
+            ? "bg-[#f8f7f4]/95 backdrop-blur-xl border-b border-black/8"
+            : "bg-[#f8f7f4]/80 backdrop-blur-md border-b border-black/5"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <Logo size={32} />
-            <span className="font-syne font-700 text-sm tracking-widest text-cream uppercase">
+            <Logo size={32} color="#777777" />
+            <span className="font-syne font-700 text-sm tracking-widest text-[#111] uppercase">
               Dental 78
             </span>
           </Link>
@@ -47,8 +47,8 @@ export default function Nav() {
                 href={link.href}
                 className={`font-dm text-sm tracking-wider transition-colors duration-200 ${
                   pathname === link.href
-                    ? "text-cream"
-                    : "text-accent hover:text-cream"
+                    ? "text-[#111]"
+                    : "text-[#777] hover:text-[#111]"
                 }`}
               >
                 {link.label}
@@ -58,16 +58,16 @@ export default function Nav() {
               href="https://www.vevidental.com/ddental/home"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-brand/60 hover:text-brand transition-colors duration-200"
+              className="flex items-center gap-1.5 text-[#999] hover:text-[#777] transition-colors duration-200"
             >
-              <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor">
+              <svg width="6" height="6" viewBox="0 0 8 8" fill="currentColor">
                 <circle cx="4" cy="4" r="3" />
               </svg>
               <span className="font-dm text-xs tracking-widest uppercase">Acceso clientes</span>
             </a>
             <Link
               href="/contacto"
-              className="ml-2 px-5 py-2 border border-brand/50 text-cream text-sm font-dm tracking-wider hover:border-brand hover:bg-brand/10 transition-all duration-200"
+              className="ml-2 px-5 py-2 border border-[#777]/40 text-[#111] text-sm font-dm tracking-wider hover:border-[#777] hover:bg-[#777]/8 transition-all duration-200"
             >
               Contacto
             </Link>
@@ -79,15 +79,9 @@ export default function Nav() {
             className="md:hidden flex flex-col gap-1.5 p-2"
             aria-label="Menú"
           >
-            <span
-              className={`block w-5 h-px bg-cream transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
-            />
-            <span
-              className={`block w-5 h-px bg-cream transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
-            />
-            <span
-              className={`block w-5 h-px bg-cream transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
-            />
+            <span className={`block w-5 h-px bg-[#111] transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
+            <span className={`block w-5 h-px bg-[#111] transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
+            <span className={`block w-5 h-px bg-[#111] transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
           </button>
         </div>
       </nav>
@@ -100,32 +94,17 @@ export default function Nav() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-40 bg-[#080808] flex flex-col items-center justify-center gap-8"
+            className="fixed inset-0 z-40 bg-[#f8f7f4] flex flex-col items-center justify-center gap-8"
           >
             {NAV_LINKS.map((link, i) => (
-              <motion.div
-                key={link.href}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.08 }}
-              >
-                <Link
-                  href={link.href}
-                  className="font-syne text-3xl font-700 text-cream hover:text-brand transition-colors"
-                >
+              <motion.div key={link.href} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.08 }}>
+                <Link href={link.href} className="font-syne text-3xl font-700 text-[#111] hover:text-[#777] transition-colors">
                   {link.label}
                 </Link>
               </motion.div>
             ))}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.35 }}
-            >
-              <Link
-                href="/contacto"
-                className="mt-4 px-8 py-3 border border-brand text-cream font-dm tracking-wider hover:bg-brand/10 transition-all"
-              >
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.35 }}>
+              <Link href="/contacto" className="mt-4 px-8 py-3 border border-[#777]/40 text-[#111] font-dm tracking-wider hover:bg-[#777]/10 transition-all">
                 Contacto
               </Link>
             </motion.div>
